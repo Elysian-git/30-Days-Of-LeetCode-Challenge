@@ -44,9 +44,12 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = {}
         for num in nums:
-            if num in seen and seen[num] >= 1:
-                return True
-            seen[num] = seen.get(num, 0) + 1
+            if num in seen and seen[num] >= 1:      # num in seen tells you “have I ever seen this number before?”
+                return True                         # seen[num] >= 1 tells you “and have I seen it at least once already?”
+                                                    # Together, they detect the second (or later) time you hit the same value—i.e. a duplicate—so you can immediately return True.                
+          
+            seen[num] = seen.get(num, 0) + 1        # seen.get(num, 0) fetches the current count (or 0 if it’s the first time).
+                                                    # You then increment by one, so that the next time you see num, seen[num] will be ≥ 1.
         return False
 
 
