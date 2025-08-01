@@ -9,10 +9,7 @@ class Solution:
         return False
 
 
-# Solution 2 (fast) + hash 
-
-
-set
+# Solution 2 (fast) + hash set
 # --------------------------- O(n) avg TC ---------- O(n) SC ----------------
 
 class Solution:
@@ -25,6 +22,7 @@ class Solution:
                 return True
             seen.add(i)
         return False
+
 
 # Solution 3 (using sorting)
 # -------------------------- O(n log(n)) TC ------------ O(1) SC --------
@@ -50,11 +48,6 @@ class Solution:
                 return True
             seen[num] = seen.get(num, 0) + 1
         return False
-
-
-
-
-
 
 
 
