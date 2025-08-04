@@ -1,5 +1,5 @@
 # Solution 1
-# ------------------------ O() TC ---- O() SC ------------
+# ------------------------ O(n) TC ---- O(1) SC ------------
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -19,7 +19,7 @@ class Solution:
 
 
 # Solution 2
-# -------------------- O() TC ---------- O() SC ----------
+# -------------------- O(n) TC ---------- O(1) SC ----------
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
