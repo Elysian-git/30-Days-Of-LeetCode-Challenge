@@ -15,7 +15,7 @@ class MinStack:
     def pop(self) -> None:
         if self.arr:
             val = self.arr.pop()
-            if val == self.min_stack[-1]:
+            if val == self.min_stack[-1]:  # self.arr[-1] == self.min_stack[-1]
                 self.min_stack.pop()
 
     def top(self) -> int:
