@@ -1,4 +1,5 @@
- # SOLUTION 1
+# BEST SOLUTION: 1
+# SOLUTION 1
 # ------------------ O(n^2) TC ----------- O(1) SC --------
 
 class Solution:
