@@ -1,4 +1,27 @@
 # SOLUTION 1
+# ------------------ O(N × (sum(weights) − max(weights))) TC ----------- O(1) SC --------
+
+class Solution:
+    def shipWithinDays(self, weights: List[int], days: int) -> int:
+        minCap = max(weights)
+        maxCap = sum(weights)
+
+        def canShip(cap):
+            d = 1
+            curr = 0
+            for w in weights:
+                if curr + w <= cap:
+                    curr += w
+                else:
+                    d += 1
+                    curr = w
+            return d <= days
+
+        for cap in range(minCap, maxCap + 1):
+            if canShip(cap):
+                return cap
+
+# SOLUTION 2
 # ------------------ O(N∗Log(Sum(Weights))) TC ----------- O(1) SC --------
 
 class Solution:
@@ -26,7 +49,7 @@ class Solution:
                 l = cap + 1
         return res
 
-# SOLUTION 2
+# SOLUTION 3
 # ------------------ O(N∗Log(Sum(Weights))) TC ----------- O(1) SC --------
 
 class Solution:
